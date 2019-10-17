@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import './update.css';
 
 const UpdateMovie = props => {
   const initialItem = {
@@ -30,38 +31,46 @@ const UpdateMovie = props => {
       .catch(err => {
         console.log(err.response);
       });
-    props.history.push("/movies");
+    props.history.push("/");
   };
 
   return (
     <div>
-      <h2>Update Item</h2>
-      <form onSubmit={handleSubmit}>
-        <input
+      <h2 className="h2">Update Item</h2>
+      <form className="form" onSubmit={handleSubmit}>
+        <div>
+        <input className= "input"
           type="text"
           name="title"
           onChange={changeHandler}
           value={update.title}
         />
-        <input
+        </div>
+        <div>
+        <input className= "input"
           type="number"
           name="metascore"
           onChange={changeHandler}
           value={update.metascore}
         />
-        <input
+        </div>
+        <div>
+        <input className= "input"
           type="text"
           name="director"
           onChange={changeHandler}
           value={update.director}
         />
-        <input
+        </div>
+        <div>
+        <input className= "input"
           type="text"
           name="stars"
           onChange={changeHandlerStar}
           value={stars}
         />
-        <button>Update Movie</button>
+        </div>
+        <button className="button">Update Movie</button>
       </form>
     </div>
   );
