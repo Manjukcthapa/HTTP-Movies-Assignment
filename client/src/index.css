@@ -61,6 +61,24 @@ body {
   padding: 5px 10px;
   background-color: lightseagreen;
 }
+.saves-button{
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  border: 1px solid grey;
+  padding: 5px 10px;
+  font-size: 15px;;
+  background-color: lightseagreen;
+}
+.saves-buttons{
+  position: absolute;
+  top: 95px;
+  right: 20px;
+  border: 1px solid grey;
+  padding: 5px 10px;
+  font-size: 15px;;
+  background-color: lightseagreen;
+}
 .save-button:hover {
   background-color: green;
   color: white;
