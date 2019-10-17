@@ -31,7 +31,7 @@ const UpdateMovie = props => {
       .catch(err => {
         console.log(err.response);
       });
-    props.history.push("/");
+    props.history.push("/movie");
   };
 
   return (

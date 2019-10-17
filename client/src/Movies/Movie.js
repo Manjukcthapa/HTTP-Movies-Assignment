@@ -59,12 +59,12 @@ export default class Movie extends React.Component {
             movie: this.state.movie
           }
         }}>
-        <button className="update-button">
+        <button className='saves-button' >
           Update
         </button>
         </NavLink>
 
-        <button onClick={() => this.deleteMovie(this.state.movie.id)} className="delete-button">
+        <button  className='saves-buttons' onClick={() => this.deleteMovie(this.state.movie.id)}>
           Delete
         </button>
 
