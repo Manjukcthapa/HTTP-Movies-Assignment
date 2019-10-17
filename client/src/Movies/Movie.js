@@ -53,7 +53,12 @@ export default class Movie extends React.Component {
         <div className="save-button" onClick={this.saveMovie}>
           Save
         </div>
-        <NavLink to={`/update-movie/${this.state.movie.id}`}>
+        <NavLink to={{
+          pathname: `/update-movie/${this.state.movie.id}`,
+          aboutProps: {
+            movie: this.state.movie
+          }
+        }}>
         <button className="update-button">
           Update
         </button>
