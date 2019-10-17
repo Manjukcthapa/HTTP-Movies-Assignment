@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import MovieCard from "./MovieCard";
+import { NavLink , Route} from 'react-router-dom'
 export default class Movie extends React.Component {
   constructor(props) {
     super(props);
@@ -42,6 +43,11 @@ export default class Movie extends React.Component {
         <div className="save-button" onClick={this.saveMovie}>
           Save
         </div>
+        <NavLink to={`/update-movie/${this.state.movie.id}`}>
+        <button className="update-button">
+          Update
+        </button>
+        </NavLink>
       </div>
     );
   }
